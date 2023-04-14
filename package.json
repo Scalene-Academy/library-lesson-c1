@@ -1,0 +1,25 @@
+{
+  "name": "scalene-eats-c1",
+  "version": "1.0.0",
+  "description": "Teaching Basic Solidity by implementing a copy of UberEats",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scalene-Academy/scalene-eats-c1.git"
+  },
+  "author": "@andytcf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scalene-Academy/scalene-eats-c1/issues"
+  },
+  "homepage": "https://github.com/Scalene-Academy/scalene-eats-c1#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.13.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3"
+  }
+}
