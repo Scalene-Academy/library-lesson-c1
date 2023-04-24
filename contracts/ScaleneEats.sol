@@ -29,7 +29,7 @@ contract ScaleneEats {
     address storeOwner;
     mapping(uint => Order) public orders;
     uint256 public numOrders = 0;
-    uint256 public acceptedTimeLimit = 1800; // 30 minutes in seconds
+    uint256 public deliveryTimeLimit = 1800; // 30 minutes in seconds
 
     // Define the EatToken contract
     EatToken public eatToken;
