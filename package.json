@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Teaching Basic Solidity by implementing a copy of UberEats",
   "scripts": {
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "test:coverage": "hardhat coverage"
   },
   "repository": {
     "type": "git",

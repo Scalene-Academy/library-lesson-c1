@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.19;
 
 // We are using this library to make our $EAT token
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -22,14 +22,14 @@ contract ScaleneEats {
         bool accepted; // Whether the order has been accepted by a driver
         bool failed; // Whether the order has been failed by the store owner or driver
         bool delivered; // Whether the order has been delivered
-        uint256 deliveryTime; // The time that the driver accepted the order, in seconds since the Unix epoch
+        uint256 acceptedTime; // The time that the driver accepted the order, in seconds since the Unix epoch
     }
 
     // Define the variables
     address storeOwner;
     mapping(uint => Order) public orders;
     uint256 public numOrders = 0;
-    uint256 public deliveryTimeLimit = 1800; // 30 minutes in seconds
+    uint256 public acceptedTimeLimit = 1800; // 30 minutes in seconds
 
     // Define the EatToken contract
     EatToken public eatToken;
@@ -55,7 +55,7 @@ contract ScaleneEats {
             accepted: false,
             delivered: false,
             failed: false,
-            deliveryTime: 0
+            acceptedTime: 0
         });
         numOrders++;
     }
